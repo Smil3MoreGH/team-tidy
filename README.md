@@ -6,7 +6,7 @@ This is my repository where we post our completed work for DS 311 Group Assignme
 ### Group Project Task #2 Due Date: 10/3/2022
 - [x] Create the project repository on GitHub
 - [x] Invite all team members to the project
-- [ ] Make everyone "Admin" role.
+
 ### Group Project Task #3 Due Date: 10/9/2022
 - [ ]  1. Select the dataset for the group project.<br>
      2. Use one of the tools or technologies so far to explore the dataset.<br>
