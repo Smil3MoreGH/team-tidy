@@ -1,12 +1,12 @@
 # DS 311  Group Assignments
 This is the repository where we post our completed work for DS 311 Group Assignments
 
-## First Assignment progress: ![100%](https://progress-bar.dev/100)
+## 2 Assignment progress: ![100%](https://progress-bar.dev/100)
 ### Group Project Task #2 Due Date: 10/3/2022
 - [x] Create the project repository on GitHub
 - [x] Invite all team members to the project
 
-## Second Assignment progress: ![100%](https://progress-bar.dev/100)
+## 3 Assignment progress: ![100%](https://progress-bar.dev/100)
 ### Group Project Task #3 Due Date: 10/9/2022
 - [x]  1. Select the dataset for the group project.<br>
 
@@ -22,3 +22,6 @@ Grading Criteria:
 - Antonymous peer review (50%)
 - Slack Team Channel Participation (25%)
 - Report Quality (25%)
+
+## 4 Assignment progress: ![0%](https://progress-bar.dev/0)
+### Group Project Task #4 Due Date: 
