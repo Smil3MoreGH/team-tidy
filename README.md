@@ -19,7 +19,7 @@ This is the repository where we post our completed work for DS 311 Group Assignm
 - [x]  5. Push the coding file and summary report to the group project repository.<br>
         
 Grading Criteria:
-- Antonymous peer review (50%)
+- Anonymous peer review (50%)
 - Slack Team Channel Participation (25%)
 - Report Quality (25%)
 
