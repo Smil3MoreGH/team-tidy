@@ -8,6 +8,9 @@ This is the branch of Maximilian
 - clean the data -> remove NaN
 - Create some first basic visualizations(histogram)
 2. Group Project Task #5
+- find additional interesting questions
+- answer them by analyzing the data set
+- create visualizations out of the analyse
 3. Group Project Task #6
 4. Group Project Task #7
 5. Group Project Task #8
