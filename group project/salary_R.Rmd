@@ -1,0 +1,207 @@
+---
+title: "DS 311 group project"
+author: "Pyi Than"
+date: "2022-11-09"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Importing library
+
+```{r}
+library(readxl)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+```
+## Importing data
+
+```{r}
+salary=data.frame(read_excel("salary_data_states.xlsx"))
+```
+## Look at column name
+
+```{r}
+colnames(salary)
+```
+
+## Check the data type
+
+```{r}
+str(salary)
+```
+
+## Check Unique job title sub group
+
+```{r}
+unique(salary$JOB_TITLE_SUBGROUP)
+```
+## Check Unique work state
+
+```{r}
+unique(salary$WORK_STATE)
+```
+
+## Check missing values
+
+```{r}
+apply(X=is.na(salary),MARGIN=2,FUN=sum)
+```
+
+## What states(of those I am willing to move to) have the highest paying data-related salaries?
+
+Average data scientist salary by America. 
+```{r}
+salary_dataScientist=salary%>%
+  group_by(WORK_STATE,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("data scientist"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)
+salary_dataScientist
+write.csv(salary_dataScientist,'C:\\Users\\Aungkyaw\\Desktop\\salary_dataScientist.csv')
+```
+The state I choose is California, Washington, Hawaii, Wisconsin and New Mexico
+## Average data scientist salary by state.
+```{r}
+## data scientist
+salary_dataScientist_state=salary%>%
+  group_by(WORK_STATE,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("data scientist"))%>%
+  filter(WORK_STATE %in% c("California","Washington","Hawaii","Wisconsin","New Mexico"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)
+salary_dataScientist_state
+
+# California has the highest average annual salary for data scientist.Follow by Washington and Minnesota. On the other hand, Florida has the lowest average annual salary for data scientist.
+```
+
+## Which companies have the highest salaries for data scientist in California
+
+```{r}
+salary_dataScientist_company_CA=salary%>%
+  group_by(WORK_STATE,EMPLOYER_NAME,JOB_TITLE_SUBGROUP)%>%
+   filter(JOB_TITLE_SUBGROUP %in% c("data scientist"))%>%
+  filter(WORK_STATE %in% c("California"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)%>%
+  head(5)
+salary_dataScientist_company_CA
+write.csv(salary_dataScientist_company_CA,'C:\\Users\\Aungkyaw\\Desktop\\salary_dataScientist_company_CA.csv')
+```
+## Which companies have the highest salaries for data scientist in Washington
+
+```{r}
+salary_dataScientist_company_WA=salary%>%
+  group_by(WORK_STATE,EMPLOYER_NAME,JOB_TITLE_SUBGROUP)%>%
+   filter(JOB_TITLE_SUBGROUP %in% c("data scientist"))%>%
+  filter(WORK_STATE %in% c("Washington"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)%>%
+  head(5)
+salary_dataScientist_company_WA
+write.csv(salary_dataScientist_company_WA,'C:\\Users\\Aungkyaw\\Desktop\\salary_dataScientist_company_WA.csv')
+```
+
+## Average data Analyst salary in America. 
+
+```{r}
+salary_dataAnalyst=salary%>%
+  group_by(WORK_STATE,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("data analyst"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)
+salary_dataAnalyst
+write.csv(salary_dataAnalyst,'C:\\Users\\Aungkyaw\\Desktop\\salary_dataAnalysst.csv')
+```
+
+## Average data analyst salary by state
+
+```{r}
+salary_dataAnalyst_state=salary%>%
+  group_by(WORK_STATE,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("data analyst"))%>%
+  filter(WORK_STATE %in% c("California","Washington","Hawaii","Wisconsin","New Mexico"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)
+salary_dataAnalyst_state
+```
+
+## Average business Analyst salary in America. 
+
+```{r}
+salary_businessAnalyst=salary%>%
+  group_by(WORK_STATE,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("business analyst"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)
+salary_businessAnalyst
+write.csv(salary_businessAnalyst,'C:\\Users\\Aungkyaw\\Desktop\\salary_businessAnalysst.csv')
+```
+
+## Average business analyst salary by state
+
+```{r}
+salary_businessAnalyst_state=salary%>%
+  group_by(WORK_STATE,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("business analyst"))%>%
+  filter(WORK_STATE %in% c("California","Washington","Hawaii","Wisconsin","New Mexico"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)
+salary_businessAnalyst_state
+write.csv(salary_businessAnalyst_state,'C:\\Users\\Aungkyaw\\Desktop\\salary_businessAnalyst_state.csv')
+```
+
+## Which company gives highest average data scientist salary in CA
+
+```{r}
+salary_dataScientist_company_ca=salary%>%
+  group_by(WORK_STATE,EMPLOYER_NAME,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("data scientist"))%>%
+  filter(WORK_STATE %in% c("California"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)
+salary_dataScientist_company_ca
+write.csv(salary_dataScientist_company_ca,'C:\\Users\\Aungkyaw\\Desktop\\salary_dataScientist_company_ca.csv')
+```
+
+## Which company gives highest average data scientist salary in WA
+
+```{r}
+salary_dataScientist_company_wa=salary%>%
+  group_by(WORK_STATE,EMPLOYER_NAME,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("data scientist"))%>%
+  filter(WORK_STATE %in% c("Washington"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)
+salary_dataScientist_company_wa
+write.csv(salary_dataScientist_company_wa,'C:\\Users\\Aungkyaw\\Desktop\\salary_dataScientist_company_wa.csv')
+```
+## Which company gives highest average business analyst salary in CA
+
+```{r}
+salary_businessAnalyst_company_ca=salary%>%
+  group_by(WORK_STATE,EMPLOYER_NAME,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("business analyst"))%>%
+  filter(WORK_STATE %in% c("California"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)%>%
+  head(5)
+salary_businessAnalyst_company_ca
+write.csv(salary_businessAnalyst_company_ca,'C:\\Users\\Aungkyaw\\Desktop\\salary_businessAnalyst_company_ca.csv')
+```
+
+## Which company gives highest average business analyst salary in WA
+
+```{r}
+salary_businessAnalyst_company_wa=salary%>%
+  group_by(WORK_STATE,EMPLOYER_NAME,JOB_TITLE_SUBGROUP)%>%
+  filter(JOB_TITLE_SUBGROUP %in% c("business analyst"))%>%
+  filter(WORK_STATE %in% c("Washington"))%>%
+  summarize(AverageAnnualSalary=mean(PAID_WAGE_PER_YEAR))%>%
+  arrange(-AverageAnnualSalary)%>%
+  head(5)
+salary_businessAnalyst_company_wa
+write.csv(salary_businessAnalyst_company_wa,'C:\\Users\\Aungkyaw\\Desktop\\salary_businessAnalyst_company_wa.csv')
+```
