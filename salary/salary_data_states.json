@@ -1,0 +1,188 @@
+{
+	"fields": [
+		{
+			"name": "CASE_NUMBER",
+			"title": "CASE_NUMBER",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "CASE_STATUS",
+			"title": "CASE_STATUS",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "CASE_RECEIVED_DATE",
+			"title": "CASE_RECEIVED_DATE",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#dateTime"
+			}
+		},
+		{
+			"name": "DECISION_DATE",
+			"title": "DECISION_DATE",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#dateTime"
+			}
+		},
+		{
+			"name": "EMPLOYER_NAME",
+			"title": "EMPLOYER_NAME",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "JOB_TITLE",
+			"title": "JOB_TITLE",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "WORK_CITY",
+			"title": "WORK_CITY",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "EDUCATION_LEVEL_REQUIRED",
+			"title": "EDUCATION_LEVEL_REQUIRED",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "COLLEGE_MAJOR_REQUIRED",
+			"title": "COLLEGE_MAJOR_REQUIRED",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "EXPERIENCE_REQUIRED_Y_N",
+			"title": "EXPERIENCE_REQUIRED_Y_N",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "EXPERIENCE_REQUIRED_NUM_MONTHS",
+			"title": "EXPERIENCE_REQUIRED_NUM_MONTHS",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#int"
+			}
+		},
+		{
+			"name": "COUNTRY_OF_CITIZENSHIP",
+			"title": "COUNTRY_OF_CITIZENSHIP",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "PREVAILING_WAGE_SOC_CODE",
+			"title": "PREVAILING_WAGE_SOC_CODE",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "PREVAILING_WAGE_SOC_TITLE",
+			"title": "PREVAILING_WAGE_SOC_TITLE",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "WORK_STATE",
+			"title": "WORK_STATE",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "WORK_STATE_ABBREVIATION",
+			"title": "WORK_STATE_ABBREVIATION",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "WORK_POSTAL_CODE",
+			"title": "WORK_POSTAL_CODE",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "FULL_TIME_POSITION_Y_N",
+			"title": "FULL_TIME_POSITION_Y_N",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "VISA_CLASS",
+			"title": "VISA_CLASS",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "PREVAILING_WAGE_PER_YEAR",
+			"title": "PREVAILING_WAGE_PER_YEAR",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#int"
+			}
+		},
+		{
+			"name": "PAID_WAGE_PER_YEAR",
+			"title": "PAID_WAGE_PER_YEAR",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#int"
+			}
+		},
+		{
+			"name": "JOB_TITLE_SUBGROUP",
+			"title": "JOB_TITLE_SUBGROUP",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#string"
+			}
+		},
+		{
+			"name": "order",
+			"title": "order",
+			"constraints": {
+				"required": true,
+				"type": "http://www.w3.org/2001/XMLSchema#int"
+			}
+		}
+	]
+}
