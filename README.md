@@ -23,5 +23,11 @@ Grading Criteria:
 - Slack Team Channel Participation (25%)
 - Report Quality (25%)
 
-## 4 Assignment progress: ![0%](https://progress-bar.dev/0)
-### Group Project Task #4 Due Date: 
+## 4 Assignment progress: ![100%](https://progress-bar.dev/100)
+### Group Project Task #4 Due Date: 11/14/2022
+- [x]  Uploaded final document from group work.<br>
+
+Grading Criteria:
+- Contribution to team channel discussion
+- Motivation to the project (building a collaborative enviroment)
+- Commits for each small task to the project repo
